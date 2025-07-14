@@ -114,7 +114,4 @@ Ce projet est libre et open-source sous licence MIT.
 
 ```
 
----
 
-Souhaites-tu aussi que je t’écrive le `requirements.txt` pour ce projet ? Ou une version avec badge GitHub, liens, ou version anglaise ?
-```
