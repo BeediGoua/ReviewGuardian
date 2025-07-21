@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # API FastAPI - Service principal
+  api:
+    build: .
+    container_name: reviewguardian-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=info
+      - MODEL_PATH=/app/models
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - reviewguardian-network
+
+  # Interface Streamlit
+  streamlit:
+    build: 
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: reviewguardian-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - reviewguardian-network
+
+  # Monitoring avec Prometheus (optionnel)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: reviewguardian-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - reviewguardian-network
+
+  # Dashboard Grafana (optionnel)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: reviewguardian-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./monitoring/grafana:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - reviewguardian-network
+
+  # Redis pour cache (optionnel)
+  redis:
+    image: redis:7-alpine
+    container_name: reviewguardian-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - reviewguardian-network
+
+volumes:
+  grafana-storage:
+  redis-data:
+
+networks:
+  reviewguardian-network:
+    driver: bridge

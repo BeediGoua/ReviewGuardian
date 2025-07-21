@@ -1,0 +1,59 @@
+# Git et metadata
+.git
+.gitignore
+.github
+.vscode
+*.md
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.idea
+
+# Jupyter Notebooks (gardent uniquement les modèles)
+notebooks/*.ipynb
+notebooks/reports/
+
+# Données brutes (ne garder que processed)
+data/raw/
+data/scraped/
+
+# Logs et temporaires
+logs/*
+reports/*
+*.tmp
+*.swp
+*.swo
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+tests/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/

@@ -1,0 +1,92 @@
+{
+  "ab_toxicity_model_comparison_20250720_220040": {
+    "test_id": "ab_toxicity_model_comparison_20250720_220040",
+    "name": "Toxicity Model Comparison",
+    "description": "Test between v1 and v2 of toxicity classifier",
+    "model_a_id": "demo_toxicity_classi",
+    "model_b_id": "demo_toxicity_classi",
+    "traffic_split": 0.3,
+    "start_date": "2025-07-20T22:00:40.799676",
+    "end_date": "2025-07-27T22:00:40.799676",
+    "success_metrics": [
+      "accuracy",
+      "precision",
+      "recall"
+    ],
+    "min_sample_size": 1000,
+    "significance_level": 0.05,
+    "status": "active"
+  },
+  "ab_toxicity_model_comparison_20250720_220104": {
+    "test_id": "ab_toxicity_model_comparison_20250720_220104",
+    "name": "Toxicity Model Comparison",
+    "description": "Test between v1 and v2 of toxicity classifier",
+    "model_a_id": "demo_toxicity_classi",
+    "model_b_id": "demo_toxicity_classi",
+    "traffic_split": 0.3,
+    "start_date": "2025-07-20T22:01:04.001846",
+    "end_date": "2025-07-27T22:01:04.001846",
+    "success_metrics": [
+      "accuracy",
+      "precision",
+      "recall"
+    ],
+    "min_sample_size": 1000,
+    "significance_level": 0.05,
+    "status": "active"
+  },
+  "ab_toxicity_model_comparison_20250720_220703": {
+    "test_id": "ab_toxicity_model_comparison_20250720_220703",
+    "name": "Toxicity Model Comparison",
+    "description": "Test between v1 and v2 of toxicity classifier",
+    "model_a_id": "demo_toxicity_classi",
+    "model_b_id": "demo_toxicity_classi",
+    "traffic_split": 0.3,
+    "start_date": "2025-07-20T22:07:03.483442",
+    "end_date": "2025-07-27T22:07:03.483442",
+    "success_metrics": [
+      "accuracy",
+      "precision",
+      "recall"
+    ],
+    "min_sample_size": 1000,
+    "significance_level": 0.05,
+    "status": "active"
+  },
+  "ab_toxicity_model_comparison_20250720_220751": {
+    "test_id": "ab_toxicity_model_comparison_20250720_220751",
+    "name": "Toxicity Model Comparison",
+    "description": "Test between v1 and v2 of toxicity classifier",
+    "model_a_id": "demo_toxicity_classi",
+    "model_b_id": "demo_toxicity_classi",
+    "traffic_split": 0.3,
+    "start_date": "2025-07-20T22:07:51.922675",
+    "end_date": "2025-07-27T22:07:51.922675",
+    "success_metrics": [
+      "accuracy",
+      "precision",
+      "recall"
+    ],
+    "min_sample_size": 1000,
+    "significance_level": 0.05,
+    "status": "active"
+  },
+  "ab_toxicity_model_comparison_20250720_220844": {
+    "test_id": "ab_toxicity_model_comparison_20250720_220844",
+    "name": "Toxicity Model Comparison",
+    "description": "Test between v1 and v2 of toxicity classifier",
+    "model_a_id": "demo_toxicity_classi",
+    "model_b_id": "demo_toxicity_classi",
+    "traffic_split": 0.3,
+    "start_date": "2025-07-20T22:08:44.656097",
+    "end_date": "2025-07-27T22:08:44.656097",
+    "success_metrics": [
+      "accuracy",
+      "precision",
+      "recall"
+    ],
+    "min_sample_size": 1000,
+    "significance_level": 0.05,
+    "status": "active"
+  }
+}
