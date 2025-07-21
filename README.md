@@ -130,7 +130,8 @@ L'application Streamlit fournit une interface complète pour interagir avec le p
   * **Visualisation de l'explicabilité** : Explorez les rapports LIME et SHAP pour comprendre *pourquoi* un avis a été classifié d'une certaine manière.
   * **Outils MLOps** : Accédez aux dashboards de monitoring, comparez les modèles (A/B testing) et gérez le cycle de vie des modèles.
 
-* **Demo** :[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://yourusername-reviewguardian.streamlit.app)
+* **Demo**: [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://reviewguardian-2rkgvek43wzaqqaniuzdsq.streamlit.app/)
+
 
 -----
 
