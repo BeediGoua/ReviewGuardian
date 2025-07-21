@@ -94,7 +94,7 @@ graph TD
 
 ```bash
 # 1. Cloner le dépôt
-git clone [https://github.com/BeediGoua/ReviewGuardian.git](https://github.com/BeediGoua/ReviewGuardian.git)
+git clone https://github.com/BeediGoua/ReviewGuardian.git
 cd ReviewGuardian
 
 # 2. Lancer la stack complète
@@ -130,9 +130,7 @@ L'application Streamlit fournit une interface complète pour interagir avec le p
   * **Visualisation de l'explicabilité** : Explorez les rapports LIME et SHAP pour comprendre *pourquoi* un avis a été classifié d'une certaine manière.
   * **Outils MLOps** : Accédez aux dashboards de monitoring, comparez les modèles (A/B testing) et gérez le cycle de vie des modèles.
 
-*(Ajoutez ici des captures d'écran de votre interface Streamlit pour la rendre plus parlante)*
-`[Screenshot de l'analyse en temps réel]`
-`[Screenshot de la visualisation LIME/SHAP]`
+* **Demo** :[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://yourusername-reviewguardian.streamlit.app)
 
 -----
 
@@ -154,13 +152,7 @@ Le pipeline extrait plus de 30 features pour capturer le ton, la complexité et 
       * `nb_exclamations`, `nb_interrogations` : Utilisation de la ponctuation.
       * `has_url`, `has_email`, `has_emoji` : Détection de contenus spécifiques.
 
-### Performances des modèles
 
-| Modèle | Accuracy | F1-Score | AUC |
-| :--- | :--- | :--- | :--- |
-| **RandomForest** | **86.1%** | **0.86** | **92.2%** |
-| **LogisticRegression** | 81.7% | 0.82 | 90.4% |
-| **NaiveBayes** | 73.0% | 0.75 | 79.5% |
 
 -----
 
@@ -329,4 +321,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](https://www.google.com
 
   * **GitHub** : [@BeediGoua](https://www.google.com/search?q=https://github.com/BeediGoua)
   * **LinkedIn** : [@BeediGoua](https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/)
+  
+
 
